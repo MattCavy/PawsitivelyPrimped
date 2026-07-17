@@ -4,7 +4,8 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { Sparkles, Star } from "lucide-react";
 import InstagramEmbed from "@/components/InstagramEmbed";
-import { reelUrls } from "@/components/InstagramReels";
+
+const heroReelUrl = "https://www.instagram.com/p/B_Jj_7kJi96/";
 
 export default function Hero() {
   return (
@@ -61,7 +62,7 @@ export default function Hero() {
         >
           <div className="relative mx-auto w-full max-w-md overflow-hidden rounded-[2.5rem] bg-gradient-to-br from-coral via-sunny to-teal p-2 shadow-2xl">
             <div className="max-h-[560px] overflow-hidden rounded-[2.2rem] bg-white/90">
-              <InstagramEmbed url={reelUrls[0]} className="w-full max-w-none" />
+              <InstagramEmbed url={heroReelUrl} className="w-full max-w-none" />
             </div>
           </div>
           <div className="absolute -bottom-4 -left-4 rounded-2xl bg-white px-5 py-3 shadow-xl">
