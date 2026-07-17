@@ -58,20 +58,21 @@ export default function Hero() {
           initial={{ opacity: 0, scale: 0.9, rotate: -3 }}
           animate={{ opacity: 1, scale: 1, rotate: 0 }}
           transition={{ duration: 0.7, delay: 0.15 }}
-          className="relative"
         >
-          <div className="relative mx-auto w-full max-w-md overflow-hidden rounded-[2.5rem] bg-gradient-to-br from-coral via-sunny to-teal p-2 shadow-2xl">
+          <div className="mx-auto w-full max-w-md overflow-hidden rounded-[2.5rem] bg-gradient-to-br from-coral via-sunny to-teal p-2 shadow-2xl">
             <div className="max-h-[560px] overflow-hidden rounded-[2.2rem] bg-white/90">
               <InstagramEmbed url={heroReelUrl} className="w-full max-w-none" />
             </div>
           </div>
-          <div className="absolute -bottom-4 -left-4 rounded-2xl bg-white px-5 py-3 shadow-xl">
-            <p className="font-display text-2xl font-extrabold text-teal-dark">6 wks</p>
-            <p className="text-xs font-bold text-ink/60">typical maintenance</p>
-          </div>
-          <div className="absolute -right-4 -top-4 rounded-2xl bg-white px-5 py-3 shadow-xl">
-            <p className="font-display text-2xl font-extrabold text-coral-dark">30+</p>
-            <p className="text-xs font-bold text-ink/60">grooming services</p>
+          <div className="mx-auto mt-5 flex w-full max-w-md justify-center gap-4">
+            <div className="rounded-2xl bg-white px-5 py-3 text-center shadow-xl">
+              <p className="font-display text-2xl font-extrabold text-teal-dark">6 wks</p>
+              <p className="text-xs font-bold text-ink/60">typical maintenance</p>
+            </div>
+            <div className="rounded-2xl bg-white px-5 py-3 text-center shadow-xl">
+              <p className="font-display text-2xl font-extrabold text-coral-dark">30+</p>
+              <p className="text-xs font-bold text-ink/60">grooming services</p>
+            </div>
           </div>
         </motion.div>
       </div>
