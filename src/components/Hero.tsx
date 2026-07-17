@@ -59,19 +59,19 @@ export default function Hero() {
           animate={{ opacity: 1, scale: 1, rotate: 0 }}
           transition={{ duration: 0.7, delay: 0.15 }}
         >
-          <div className="mx-auto w-full max-w-md rounded-[2.5rem] bg-gradient-to-br from-coral via-sunny to-teal p-2 shadow-2xl">
-            <div className="overflow-hidden rounded-[2.2rem] bg-white/90">
+          <div className="mx-auto w-full max-w-md rounded-[2.5rem] bg-gradient-to-br from-coral via-sunny to-teal p-2 pb-4 shadow-2xl">
+            <div className="max-h-[500px] overflow-hidden rounded-[2.2rem] bg-white/90">
               <InstagramEmbed url={heroReelUrl} className="w-full max-w-none" />
             </div>
-          </div>
-          <div className="mx-auto mt-5 flex w-full max-w-md justify-center gap-4">
-            <div className="rounded-2xl bg-white px-5 py-3 text-center shadow-xl">
-              <p className="font-display text-2xl font-extrabold text-teal-dark">6 wks</p>
-              <p className="text-xs font-bold text-ink/60">typical maintenance</p>
-            </div>
-            <div className="rounded-2xl bg-white px-5 py-3 text-center shadow-xl">
-              <p className="font-display text-2xl font-extrabold text-coral-dark">30+</p>
-              <p className="text-xs font-bold text-ink/60">grooming services</p>
+            <div className="mt-4 flex justify-center gap-4">
+              <div className="rounded-2xl bg-white px-4 py-2.5 text-center shadow-lg">
+                <p className="font-display text-xl font-extrabold text-teal-dark">6 wks</p>
+                <p className="text-[0.65rem] font-bold text-ink/60">typical maintenance</p>
+              </div>
+              <div className="rounded-2xl bg-white px-4 py-2.5 text-center shadow-lg">
+                <p className="font-display text-xl font-extrabold text-coral-dark">30+</p>
+                <p className="text-[0.65rem] font-bold text-ink/60">grooming services</p>
+              </div>
             </div>
           </div>
         </motion.div>
