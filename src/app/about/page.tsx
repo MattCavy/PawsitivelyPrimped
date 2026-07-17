@@ -26,7 +26,7 @@ export default function AboutPage() {
         </div>
         <div>
           <h2 className="font-display text-3xl font-extrabold">
-            Hi, we&apos;re {businessInfo.owner}
+            Hi, I&apos;m {businessInfo.owner}
           </h2>
           <p className="mt-4 text-ink/70">
             {businessInfo.name} was built on a simple idea: grooming should
