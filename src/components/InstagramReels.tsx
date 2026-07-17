@@ -8,7 +8,7 @@ import { businessInfo } from "@/lib/services";
 // Add reel/post permalinks here — paste any public Instagram reel or post URL
 // from the @pawsitivelyprimped account and it will render as a live embed.
 export const reelUrls: string[] = [
-  "https://www.instagram.com/p/Da0WFZIlu4X/",
+  "https://www.instagram.com/p/B_JkW_eJh_5/",
 ];
 
 export default function InstagramReels() {
