@@ -2,7 +2,9 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { Sparkles, Scissors, Star } from "lucide-react";
+import { Sparkles, Star } from "lucide-react";
+import InstagramEmbed from "@/components/InstagramEmbed";
+import { reelUrls } from "@/components/InstagramReels";
 
 export default function Hero() {
   return (
@@ -57,9 +59,9 @@ export default function Hero() {
           transition={{ duration: 0.7, delay: 0.15 }}
           className="relative"
         >
-          <div className="relative mx-auto aspect-square w-full max-w-md rounded-[2.5rem] bg-gradient-to-br from-coral via-sunny to-teal p-2 shadow-2xl">
-            <div className="flex h-full w-full items-center justify-center rounded-[2.2rem] bg-white/90">
-              <Scissors className="h-24 w-24 text-coral-dark" strokeWidth={1.5} />
+          <div className="relative mx-auto w-full max-w-md overflow-hidden rounded-[2.5rem] bg-gradient-to-br from-coral via-sunny to-teal p-2 shadow-2xl">
+            <div className="max-h-[560px] overflow-hidden rounded-[2.2rem] bg-white/90">
+              <InstagramEmbed url={reelUrls[0]} className="w-full max-w-none" />
             </div>
           </div>
           <div className="absolute -bottom-4 -left-4 rounded-2xl bg-white px-5 py-3 shadow-xl">

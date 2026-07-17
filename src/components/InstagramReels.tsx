@@ -1,7 +1,8 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
 import InstagramIcon from "@/components/icons/InstagramIcon";
+import InstagramEmbed, { loadInstagramEmbedScript } from "@/components/InstagramEmbed";
 import { businessInfo } from "@/lib/services";
 
 // Add reel/post permalinks here — paste any public Instagram reel or post URL
@@ -10,59 +11,9 @@ export const reelUrls: string[] = [
   "https://www.instagram.com/p/Da0WFZIlu4X/",
 ];
 
-declare global {
-  interface Window {
-    instgrm?: {
-      Embeds: { process: () => void };
-    };
-  }
-}
-
-function InstagramEmbed({ url }: { url: string }) {
-  const ref = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    if (window.instgrm) {
-      window.instgrm.Embeds.process();
-    }
-  }, []);
-
-  return (
-    <div ref={ref} className="mx-auto w-full max-w-[360px]">
-      <blockquote
-        className="instagram-media"
-        data-instgrm-permalink={url}
-        data-instgrm-version="14"
-        style={{ margin: "0 auto", width: "100%" }}
-      />
-    </div>
-  );
-}
-
 export default function InstagramReels() {
   useEffect(() => {
-    if (window.instgrm) {
-      window.instgrm.Embeds.process();
-      return;
-    }
-
-    const existing = document.getElementById(
-      "ig-embed-script"
-    ) as HTMLScriptElement | null;
-
-    if (existing) {
-      existing.addEventListener("load", () => window.instgrm?.Embeds.process(), {
-        once: true,
-      });
-      return;
-    }
-
-    const script = document.createElement("script");
-    script.id = "ig-embed-script";
-    script.src = "https://www.instagram.com/embed.js";
-    script.async = true;
-    script.onload = () => window.instgrm?.Embeds.process();
-    document.body.appendChild(script);
+    loadInstagramEmbedScript();
   }, []);
 
   return (
