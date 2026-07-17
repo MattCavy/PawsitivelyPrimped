@@ -59,8 +59,8 @@ export default function Hero() {
           animate={{ opacity: 1, scale: 1, rotate: 0 }}
           transition={{ duration: 0.7, delay: 0.15 }}
         >
-          <div className="mx-auto w-full max-w-md overflow-hidden rounded-[2.5rem] bg-gradient-to-br from-coral via-sunny to-teal p-2 shadow-2xl">
-            <div className="max-h-[560px] overflow-hidden rounded-[2.2rem] bg-white/90">
+          <div className="mx-auto w-full max-w-md rounded-[2.5rem] bg-gradient-to-br from-coral via-sunny to-teal p-2 shadow-2xl">
+            <div className="overflow-hidden rounded-[2.2rem] bg-white/90">
               <InstagramEmbed url={heroReelUrl} className="w-full max-w-none" />
             </div>
           </div>
