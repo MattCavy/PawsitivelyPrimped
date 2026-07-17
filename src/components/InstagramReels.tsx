@@ -40,9 +40,9 @@ export default function InstagramReels() {
       </div>
 
       {reelUrls.length > 0 ? (
-        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="flex flex-wrap justify-center gap-8">
           {reelUrls.map((url) => (
-            <InstagramEmbed key={url} url={url} />
+            <InstagramEmbed key={url} url={url} className="w-full max-w-[360px]" />
           ))}
         </div>
       ) : (
